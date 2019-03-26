@@ -9,6 +9,7 @@
         <e p="Arrive.cs" t="Include" />
         <e p="Base.cs" t="Include" />
         <e p="Boid.cs" t="Include" />
+        <e p="Brain.cs" t="Include" />
         <e p="Bullet.cs" t="Include" />
         <e p="FollowPath.cs" t="Include" />
         <e p="FPSController.cs" t="Include" />
@@ -17,6 +18,7 @@
         <e p="Path.cs" t="Include" />
         <e p="Pursue.cs" t="Include" />
         <e p="Seek.cs" t="Include" />
+        <e p="Shoot.cs" t="Include" />
         <e p="StateMachine.cs" t="Include" />
         <e p="SteeringBehaviour.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">

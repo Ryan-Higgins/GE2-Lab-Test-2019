@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Base : MonoBehaviour
 {
@@ -36,6 +38,15 @@ public class Base : MonoBehaviour
             tiberium -= 10;
             GameObject fighterSpawn = Instantiate(fighterPrefab, transform.position, fighterPrefab.transform.rotation);
             fighterSpawn.GetComponent<FollowPath>().path = paths[Random.Range(0,3)].GetComponent<Path>();
+            fighterSpawn.GetComponent<Shoot>().tiberium = 7;
+        }
+    }
+    void OnTriggerEnter(Collider bullet)
+    {
+        if (bullet.CompareTag("bullet"))
+        {
+            Destroy(bullet.gameObject);
+            tiberium -= 0.5f;
         }
     }
 
@@ -46,4 +57,5 @@ public class Base : MonoBehaviour
         StartCoroutine(Tiberium());
         
     }
+ 
 }
