@@ -105,6 +105,6 @@ public class Boid : MonoBehaviour
 
             transform.position += velocity * Time.deltaTime;
             velocity *= (1.0f - (damping * Time.deltaTime));
-        }
+        } 
     }
 }

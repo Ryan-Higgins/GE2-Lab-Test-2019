@@ -11,6 +11,10 @@ public class Base : MonoBehaviour
 
     public GameObject fighterPrefab;
 
+    public List<GameObject> paths;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +34,8 @@ public class Base : MonoBehaviour
         if (tiberium >= 10)
         {
             tiberium -= 10;
-            //GameObject
+            GameObject fighterSpawn = Instantiate(fighterPrefab, transform.position, fighterPrefab.transform.rotation);
+            fighterSpawn.GetComponent<FollowPath>().path = paths[Random.Range(0,3)].GetComponent<Path>();
         }
     }
 
