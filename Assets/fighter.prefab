@@ -42,8 +42,9 @@ GameObject:
   - component: {fileID: 5524477041282564749}
   - component: {fileID: 6140487440658621446}
   - component: {fileID: 4714801308945354074}
-  - component: {fileID: 1022438428231366579}
   - component: {fileID: 3452782903381289940}
+  - component: {fileID: 1924107395294339939}
+  - component: {fileID: 3819227299820561919}
   m_Layer: 9
   m_Name: fighter
   m_TagString: Untagged
@@ -207,22 +208,6 @@ MonoBehaviour:
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   path: {fileID: 0}
---- !u!114 &1022438428231366579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5524477041282564756}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b6025ad1a1094042995e1b7f22c7c8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tiberium: 0
-  bulletPrefab: {fileID: 7390136343811685161, guid: ae30e55a6b7c9df4e827f669f7fa6235,
-    type: 3}
-  spawnPos: {fileID: 2141966349592333257}
 --- !u!114 &3452782903381289940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +220,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d5ef2e1dbc19144827bc0df6fc5bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1924107395294339939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5524477041282564756}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ccff820858ade47b95c610e3bd8f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  targetGameObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+--- !u!114 &3819227299820561919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5524477041282564756}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6025ad1a1094042995e1b7f22c7c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiberium: 7
+  bulletPrefab: {fileID: 7390136343811685161, guid: ae30e55a6b7c9df4e827f669f7fa6235,
+    type: 3}
+  spawnPos: {fileID: 2141966349592333257}
 --- !u!1 &8813897858953667768
 GameObject:
   m_ObjectHideFlags: 0

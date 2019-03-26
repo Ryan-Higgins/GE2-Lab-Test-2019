@@ -9,6 +9,7 @@ public class Shoot : MonoBehaviour
     public GameObject bulletPrefab;
 
     public GameObject spawnPos;
+    public bool atPoint = false;
     
     // Start is called before the first frame update
     void Start()
@@ -25,11 +26,12 @@ public class Shoot : MonoBehaviour
     IEnumerator Fire()
     {
         yield return new WaitForSeconds(0.5f);
-        if (tiberium > 0)
+        if (tiberium > 0 && atPoint)
         {
             Instantiate(bulletPrefab, spawnPos.transform.position, gameObject.transform.rotation);
             tiberium -= 1;
-            StartCoroutine(Fire());
+            
         }
+        StartCoroutine(Fire());
     }
 }

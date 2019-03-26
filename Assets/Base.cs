@@ -39,6 +39,7 @@ public class Base : MonoBehaviour
             GameObject fighterSpawn = Instantiate(fighterPrefab, transform.position, fighterPrefab.transform.rotation);
             fighterSpawn.GetComponent<FollowPath>().path = paths[Random.Range(0,3)].GetComponent<Path>();
             fighterSpawn.GetComponent<Shoot>().tiberium = 7;
+            fighterSpawn.GetComponent<Seek>().targetGameObject = this.gameObject;
         }
     }
     void OnTriggerEnter(Collider bullet)
